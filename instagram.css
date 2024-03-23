@@ -57,6 +57,28 @@
   font-size: 8px;
 }
 
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
 .article-container {
   display: flex;
   flex-direction: column;
@@ -93,6 +115,12 @@
   background-image: radial-gradient(circle, black 2px, transparent 2.1px);
   background-size: 100% 33.33%;
 }
+
+#profile-modal {
+	display: none;
+  width: 325px;
+  height: 250px;
+}
 /* profile-container 부분 끝 */
 
 /* 이미지 부분 시작*/
@@ -109,6 +137,13 @@
 .feed-buttons {
   width: 40px;
   margin-left: 3px;
+}
+#like-count-text {
+  padding-left : 6px;
+  padding-bottom: 6px;
+}
+#red-heart{
+  display: none;
 }
 /* button-container 부분 끝 */
 
@@ -133,6 +168,17 @@
   background-color: rgb(0, 0, 0, 0);
   color: blue;
   opacity: 50%;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: inline;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
 }
 /* comment container 부분 끝*/
 
