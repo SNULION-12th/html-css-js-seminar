@@ -183,3 +183,66 @@ section {
   cursor: pointer;
   display: none;
 }
+
+.alart {
+  z-index: 1;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 135px;
+  height: 505px;
+  right: 275px;
+  transition: all 0.5s;
+  background-color: rgb(235, 232, 232);
+  border: 3px solid rgb(94, 92, 92);
+}
+
+.alarm {
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(46, 149, 142);
+  opacity: 1;
+  font-style: sans-serif;
+  transform: translate(5%, 250%);
+}
+
+.emoji-container {
+  display: none;
+  flex-direction: column;
+  border: 2px solid gray;
+  border-radius: 3%;
+  background-color: rgb(167, 245, 245);
+}
+
+.emoji-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#most-emoji {
+  padding: 0px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  font-weight: 900;
+  font-size: 15px;
+  color: rgb(88, 86, 86);
+}
+
+.emoji-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: right;
+  text-align: justify;
+  position: relative;
+  left: 0px;
+  margin-bottom: 10px;
+}
+
+.emoji-list li {
+  margin-right: 15px;
+  padding: 0px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}

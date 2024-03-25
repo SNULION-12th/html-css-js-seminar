@@ -4,6 +4,7 @@
 // getElementById? querySelector? querySelectorAll? 무엇을 사용할지 고민해보세요.
 
 const storyModal = document.querySelector(".story-modal"); // PUT YOUR CODE HERE...
+const storyimage = document.getElementById("story-image");
 const storyElements = document.querySelectorAll(".story-element");
 
 // TODO2. "story-element" 클래스 div가 클릭될 시 "story-modal" 클래스 요소 보여주기
@@ -23,8 +24,9 @@ storyElements.forEach((storyElement) => {
 // 앞서 정의한 storyModal 에 eventListener를 추가하세요.
 // eventType은 'click' 이며, eventHandler의 기능은 다음과 같습니다.
 // eventHandler 기능 : 앞서 정의한 storyModal의 style.display 속성을 "none"으로 바꿈.
-storyModal.addEventListener("click", () => {
-  storyModal.style.display = "none";
+storyModal.addEventListener("click", (event) => {
+  if (event.target === storyimage) return;
+  else storyModal.style.display = "none";
 });
 
 /*실습 2번*/
