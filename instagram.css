@@ -144,3 +144,107 @@
   color: gray;
   font-size: 15px;
 }
+
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
+#profile-modal {
+  display: none;
+  width: 325px;
+  height: 250px;
+}
+
+#like-count-text {
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+#red-heart {
+  display: none;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: inline;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
+.logo:hover {
+  opacity: 0.5; /* 불투명도를 50%로 설정 */
+}
+
+.logo:hover {
+  opacity: 0.5; /* 불투명도를 50%로 설정 */
+}
+
+.search:hover {
+  opacity: 0.5; /* 불투명도를 50%로 설정 */
+}
+
+.icon-list:hover {
+  opacity: 0.5; /* 불투명도를 50%로 설정 */
+}
+
+.article:hover {
+  opacity: 0.5; /* 불투명도를 50%로 설정 */
+}
+
+.notification {
+  width: 1000px;
+  position: fixed;
+  right: -1000px; /* Initially hide it to the right */
+  top: 20px;
+  transition: right 0.5s ease-in-out;
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+/* Adding hover effects for the like button for visual feedback */
+#black-heart:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.emoji-picker {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emoji {
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.emoji:hover {
+  background-color: #efefef;
+}
