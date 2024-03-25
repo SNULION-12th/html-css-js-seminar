@@ -134,6 +134,10 @@
   color: blue;
   opacity: 50%;
 }
+
+.comment-button:hover {
+  cursor: pointer;
+}
 /* comment container 부분 끝*/
 
 /* 피드 부분 끝*/
@@ -143,4 +147,164 @@
   justify-content: center;
   color: gray;
   font-size: 15px;
+}
+
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
+#profile-modal {
+  display: none;
+  width: 325px;
+  height: 250px;
+}
+
+#like-count-text {
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+#red-heart {
+  display: none;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: inline;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: inline;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clicked {
+  transform: scale(0.7); /* 클릭 시 로고의 크기를 줄임 */
+  opacity: 0.5;
+}
+
+.notification-modal {
+  display: none;
+  margin-top: 10px;
+  margin-right: 5%;
+  margin-left: 20%;
+  height: 90px;
+  animation: slideIn 0.5s ease-in-out forwards;
+  background-color: #eeeeee;
+  border: 2px solid gray;
+  border-radius: 10px;
+  position: absolute;
+  opacity: 90%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(20%);
+  }
+}
+
+.notification-head {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.notification-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  font-size: 14px;
+  gap: 10px;
+}
+
+#friend_profile {
+  width: 40px;
+  height: 40px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+#my_story_image {
+  height: 40px;
+}
+
+.light {
+  color: gray;
+}
+
+.notification-head {
+  font-size: 14px;
+}
+
+.emoji-modal {
+  display: none;
+  width: auto;
+  margin: 4px;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+.emoji-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+  flex-wrap: wrap;
+}
+
+.emoji-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  height: fit-content;
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.emoji-head {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.emoji-list {
+  margin: 5px 10px;
+}
+
+.emoji:hover {
+  cursor: pointer;
 }
