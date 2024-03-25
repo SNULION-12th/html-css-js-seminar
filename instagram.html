@@ -14,6 +14,9 @@
         <img class="icon-list" src="./images/icon_list.png" />
       </header>
       <div class="content-container">
+        <div id="notification" class="notification">
+          min_.ns7님이 회원님의 게시물을 좋아합니다.
+        </div>
         <div class="story-container">
           <div class="story-element">
             <div class="story"></div>
@@ -36,6 +39,9 @@
             <div class="story-owner">jennierubyjane</div>
           </div>
         </div>
+        <div class="story-modal">
+          <img id="story-image" src="./images/profile.png" />
+        </div>
         <section class="article-container">
           <div class="profile-container">
             <div class="profile">
@@ -44,22 +50,65 @@
             </div>
             <div class="menu"></div>
           </div>
+          \
+          <div class="profile-modal">
+            <img id="profile-modal" src="./images/likelion_snu.png" />
+          </div>
           <img class="article" src="./images/article.jpg" />
           <div class="button-container">
-            <img class="feed-buttons" src="./images/feed_like_button.png" />
+            <img
+              class="feed-buttons"
+              id="black-heart"
+              src="./images/feed_like_button.png"
+            />
+            <img
+              id="red-heart"
+              class="feed-buttons"
+              src="./images/red-heart.png"
+            />
             <img class="feed-buttons" src="./images/feed_comment_button.png" />
             <img class="feed-buttons" src="./images/feed_share_button.png" />
+            <div id="like-count-text">
+              <span>좋아요</span>
+              <span id="like-count">1003</span>
+            </div>
           </div>
-          <div class="comment-container">
-            <img class="smile" src="./images/smile.png" />
-            <input class="comment" placeholder="댓글 달기..." />
-            <button class="comment-button">게시</button>
-          </div>
+          <form class="comments-create-form">
+            <div class="comment-container">
+              <img class="smile" src="./images/smile.png" />
+              <input class="comment" placeholder="댓글 달기..." />
+              <button type="submit" class="comment-button">게시</button>
+            </div>
+          </form>
+          <div class="written-comments-container"></div>
         </section>
       </div>
+      <div class="emoticon-box">
+        <div id="famous">최고 인기 이모티콘</div>
+        <div class="emoticon">
+          <span class="emoticon-image" id="emo1">😂</span>
+          <span class="emoticon-image" id="emo2">😮</span>
+          <span class="emoticon-image" id="emo3">😍</span>
+          <span class="emoticon-image" id="emo4">😢</span>
+          <span class="emoticon-image" id="emo5">👏</span>
+          <span class="emoticon-image" id="emo6">🔥</span>
+          <span class="emoticon-image" id="emo7">🎉</span>
+          <div></div>
+          <span class="emoticon-image" id="emo8">💯</span>
+          <span class="emoticon-image" id="emo9">❤️</span>
+          <span class="emoticon-image" id="emo10">🤣</span>
+          <span class="emoticon-image" id="emo11">🥰</span>
+          <span class="emoticon-image" id="emo12">😘</span>
+          <span class="emoticon-image" id="emo13">😭</span>
+          <span class="emoticon-image" id="emo14">😊</span>
+        </div>
+      </div>
+
       <footer>
-        <p class="footer-message">Ⓒ2024 LIONGRAM</p>
+        <p class="footer-message">Ⓒ2023 LIONGRAM</p>
       </footer>
     </main>
+    <script src="./instagram.js"></script>
+    <script src="./insta.js"></script>
   </body>
 </html>
