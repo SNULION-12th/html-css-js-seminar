@@ -1,3 +1,13 @@
+p {
+  margin: 10px 0px 10px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.emoji {
+  margin: 3px;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -18,14 +28,60 @@
   height: 100%;
 }
 
+.logo:hover {
+  opacity: 0.5;
+}
+
 .header .search {
   padding: 3px;
   border: 2px solid #d3d3d3;
   border-radius: 2px;
 }
 
+.alert-container {
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease;
+  display: inline;
+  z-index: 1;
+  height: 50px;
+  width: 300px;
+}
+
+.alert-content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sheep {
+  border-radius: 50%;
+  object-fit: contain;
+  height: 100%;
+}
+
+#notification-text {
+  margin: 0px 10px 0px 10px;
+}
+
+#gray-text {
+  color: darkgray;
+}
+
+#funny-pic {
+  object-fit: contain;
+  height: 100%;
+}
+
 .header .icon-list {
   height: 100%;
+}
+
+.icon-list:hover {
+  opacity: 0.5;
 }
 
 .story-container {
@@ -57,6 +113,17 @@
   font-size: 8px;
 }
 
+#emoji-container {
+}
+
+#emoji-contents {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 25px;
+}
+
 .article-container {
   display: flex;
   flex-direction: column;
@@ -70,6 +137,14 @@
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.inline {
+  display: inline;
+}
+
+.none {
+  display: none;
 }
 
 .profile {
