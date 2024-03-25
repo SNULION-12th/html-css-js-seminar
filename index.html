@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,9 +9,9 @@
   <body>
     <main class="main-container">
       <header class="header">
-        <img class="logo" src="./images/logo.png" />
+        <img class="logo iconHover" src="./images/logo.png" />
         <input class="search" placeholder="검색" />
-        <img class="icon-list" src="./images/icon_list.png" />
+        <img class="icon-list iconHover" src="./images/icon_list.png" />
       </header>
       <div class="content-container">
         <div class="story-container">
@@ -37,15 +37,32 @@
           </div>
         </div>
         <div class="story-modal">
+          <img class="logo logo_black" src="./images/logo_black.png" />
+          <span class="xButton">x</span>
+
           <img id="story-image" src="./images/profile.png" />
+
+          <div id="story_real">
+            <input
+              id="story_text"
+              type="text"
+              placeholder="님에게 답장하기..."
+            />
+            <img class="story_icon" src="./images/icon_white1.png" />
+            <img class="story_icon" src="./images/icon_white2.png" />
+          </div>
         </div>
         <section class="article-container">
           <div class="profile-container">
             <div class="profile">
-              <img class="profile-image" src="./images/profile.png" />
+              <a href="./profile.html"
+                ><img
+                  class="profile-image iconHover"
+                  src="./images/profile.png"
+              /></a>
               <span class="profile-name">likelion_snu</span>
             </div>
-            <div class="menu"></div>
+            <div class="menu iconHover"></div>
           </div>
           <div class="profile-modal">
             <img id="profile-modal" src="./images/likelion_snu.png" />
@@ -53,7 +70,7 @@
           <img class="article" src="./images/article.jpg" />
           <div class="button-container">
             <img
-              class="feed-buttons"
+              class="feed-buttons iconHover"
               id="black-heart"
               src="./images/feed_like_button.png"
             />
@@ -62,8 +79,28 @@
               class="feed-buttons"
               src="./images/red-heart.png"
             />
-            <img class="feed-buttons" src="./images/feed_comment_button.png" />
-            <img class="feed-buttons" src="./images/feed_share_button.png" />
+            <img
+              class="feed-buttons iconHover"
+              src="./images/feed_comment_button.png"
+            />
+            <div id="like_modal">
+              <img
+                id="like_modal_pofile"
+                src="./images/like_modal_profile.png"
+              />
+              <div>
+                <strong>junha0465</strong>님이 회원님의 게시물을 좋아합니다.
+                <br /><span style="color: gray">방금전</span>
+              </div>
+              <img
+                id="like_modal_pofile2"
+                src="./images/like_modal_profile.png"
+              />
+            </div>
+            <img
+              class="feed-buttons iconHover"
+              src="./images/feed_share_button.png"
+            />
             <div id="like-count-text">
               <span>좋아요</span>
               <span id="like-count">1003</span>
@@ -71,12 +108,24 @@
           </div>
           <form class="comments-create-form">
             <div class="comment-container">
-              <img class="smile" src="./images/smile.png" />
-              <input class="comment" placeholder="댓글 달기..." />
+              <img
+                class="smile iconHover"
+                id="emoji_btn"
+                src="./images/smile.png"
+              />
+              <div id="emojiContainer" style="display: none"></div>
+              <input
+                type="text"
+                class="comment"
+                id="message"
+                placeholder="댓글 달기..."
+              />
               <button class="comment-button" type="submit">게시</button>
             </div>
           </form>
-          <div class="written-comments-container"></div>
+          <div class="written-comments-container">
+            <ul class="comment-wrapper"></ul>
+          </div>
         </section>
       </div>
       <footer>
@@ -84,5 +133,9 @@
       </footer>
     </main>
     <script src="./instagram.js"></script>
+    <script src="./header.js"></script>
+    <script src="./animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+    <script src="./emojiPicker.js"></script>
   </body>
 </html>
