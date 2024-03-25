@@ -22,25 +22,24 @@ storyElements.forEach((storyElement) => {
 // TODO3.
 // 앞서 정의한 storyModal 에 eventListener를 추가하세요.
 // eventType은 'click' 이며, eventHandler의 기능은 다음과 같습니다.
-// eventHandler 기능 : 앞서 정의한 storyModal의 style.display 속성을 "none"으로 바꿈.
-/*
+// eventHandler 기능 : 앞서 정의한 storyModal의 style.display 속성을 "block"으로 바꿈.
 storyModal.addEventListener("click", () => {
   storyModal.style.display = "none";
-});*/
+});
 
 // TODO1. "profile-container" 클래스 요소 취득하기
 const profile_container = document.querySelector(".profile-container");
 
 // TODO2. "profile-modal" id를 가진 요소 취득하기
-const profile_modal = document.getElementById("profile-modal");
+const profile_modal = document.querySelector("#profile-modal");
 
 // TODO3. profile_container에 eventListener를 추가하세요.
 // eventType은 'mouseover' 이며, eventHandler의 기능은 다음과 같습니다.
 // eventHandler 기능1 : profile_modal 의 style.display 속성을 "block"으로 바꿈.
 // eventHandler 기능2 : profile_modal 의 style.position 속성을 "absolute"으로 바꿈.
 profile_container.addEventListener("mouseover", () => {
-  (profile_modal.style.display = "block"),
-    (profile_modal.style.position = "absolute");
+  profile_modal.style.display = "block";
+  profile_modal.style.position = "absolute";
 });
 
 // TODO4. profile_container에 또 다른 eventListener를 추가하세요.
@@ -65,7 +64,8 @@ blackHeart.addEventListener("click", () => {
   const count = document.getElementById("like-count");
 
   // 좋아요 갯수를 하나 늘려서 likeCount 요소의 내부 텍스트로 저장하세요.
-  likeCount.innerText = parseInt(count.innerText) + 1;
+
+  likeCount.innerText = parseInt(count.textContent) + 1;
 });
 
 // TODO2. 빨간색 하트를 눌렀을 때
@@ -78,10 +78,11 @@ redHeart.addEventListener("click", () => {
   const count = document.getElementById("like-count");
 
   // 좋아요 갯수를 하나 감소시켜 likeCount 요소의 내부 텍스트로 저장하세요.
-  likeCount.innerText = parseInt(count.innerText) - 1;
+  likeCount.innerText = parseInt(count.textContent) - 1;
 });
+
 const commentsCreateForm = document.querySelector(".comments-create-form");
-const commentContainer = document.querySelector("#like-count-text");
+const commentContainer = document.querySelector(".written-comments-container");
 const commentInput = document.querySelector(".comment");
 
 // 댓글의 내용을 저장할 자료구조
@@ -115,10 +116,9 @@ commentsCreateForm.addEventListener("submit", (e) => {
   // TODO3. "written-comments-container"에 댓글 HTML노드를 추가해주기
   // 채팅창 값은 비워주기
   commentContainer.innerHTML = commentContainer.innerHTML + commentNode;
-  console.log("연결됐나");
   commentInput.value = "";
-  emoticonContainer.style.display = "none";
 });
+
 // 실습 5
 
 const deleteComment = (id) => {
@@ -141,5 +141,6 @@ const deleteComment = (id) => {
     )
     .join("");
 };
+
 const footer = document.querySelector(".footer-message");
 footer.innerText = `Ⓒ ${new Date().getFullYear()} INSTAGRAM FROM META`;
