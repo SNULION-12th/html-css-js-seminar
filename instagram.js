@@ -1,3 +1,35 @@
+// 실습 1
+
+const storyModal = document.querySelector(".story-modal");
+const storyElements = document.querySelectorAll(".story-element");
+
+storyElements.forEach((storyElement) => {
+  storyElement.addEventListener("click", () => {
+    storyModal.style.display = "block";
+  });
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target === storyModal) {
+    storyModal.style.display = "none";
+  }
+});
+
+// 이벤트 버블링을 찾아보면 된다
+
+// 실습 2
+const profile_container = document.querySelector(".profile-container");
+const profile_modal = document.getElementById("profile-modal");
+
+profile_container.addEventListener("mouseover", () => {
+  profile_modal.style.display = "block";
+  profile_modal.style.position = "absolute";
+});
+
+profile_container.addEventListener("mouseout", () => {
+  profile_modal.style.display = "none";
+});
+
 // 실습 3
 const likeCount = document.getElementById("like-count");
 const blackHeart = document.getElementById("black-heart");
@@ -92,3 +124,123 @@ const deleteComment = (id) => {
 
 const footer = document.querySelector(".footer-message");
 footer.innerText = `Ⓒ ${new Date().getFullYear()} INSTAGRAM FROM META`;
+
+const logo = document.querySelector(".logo");
+const logoIcons = document.querySelectorAll(".icon-list");
+const profileImage = document.querySelectorAll(".profile");
+const moreBtn = document.querySelector(".menu");
+const storyModalElements = document.querySelectorAll(".story-element");
+const alertContainer = document.querySelector(".alert-container");
+
+blackHeart.addEventListener("mouseover", () => {
+  blackHeart.style.cursor = "pointer";
+  blackHeart.style.opacity = "0.7";
+});
+blackHeart.addEventListener("mouseout", () => {
+  blackHeart.style.opacity = "1";
+  blackHeart.style.cursor = "default";
+});
+redHeart.addEventListener("mouseover", () => {
+  redHeart.style.cursor = "pointer";
+  redHeart.style.opacity = "0.7";
+});
+redHeart.addEventListener("mouseout", () => {
+  redHeart.style.opacity = "1";
+  redHeart.style.cursor = "default";
+});
+storyModalElements.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.style.cursor = "pointer";
+    element.style.opacity = "0.7";
+  });
+});
+storyModalElements.forEach((element) => {
+  element.addEventListener("mouseout", () => {
+    element.style.opacity = "1";
+    element.style.cursor = "default";
+  });
+});
+moreBtn.addEventListener("click", () => {
+  moreBtn.style.cursor = "pointer";
+  moreBtn.style.opacity = "0.5";
+});
+moreBtn.addEventListener("mouseout", () => {
+  moreBtn.style.opacity = "1";
+  moreBtn.style.cursor = "default";
+});
+logo.addEventListener("click", () => {
+  location.reload(true);
+});
+profileImage.forEach((image) => {
+  image.addEventListener("mouseover", () => {
+    image.style.cursor = "pointer";
+    image.style.opacity = "0.7";
+  });
+});
+profileImage.forEach((image) => {
+  image.addEventListener("mouseout", () => {
+    image.style.opacity = "1";
+    image.style.cursor = "default";
+  });
+});
+logoIcons.forEach((icon) => {
+  icon.addEventListener("mouseover", () => {
+    icon.style.cursor = "pointer";
+    icon.style.opacity = "0.7";
+  });
+});
+logoIcons.forEach((icon) => {
+  icon.addEventListener("mouseout", () => {
+    icon.style.opacity = "1";
+    icon.style.cursor = "default";
+  });
+});
+logo.addEventListener("mouseover", () => {
+  logo.style.cursor = "pointer";
+  logo.style.opacity = "0.7";
+});
+logo.addEventListener("mouseout", () => {
+  logo.style.opacity = "1";
+  logo.style.cursor = "default";
+});
+
+blackHeart.addEventListener("click", () => {
+  alertContainer.style.display = "flex";
+  setTimeout(() => {
+    alertContainer.style.right = "0";
+  }, 100);
+  setTimeout(function () {
+    alertContainer.style.right = "-100%";
+    setTimeout(function () {
+      alertContainer.style.display = "none";
+    }, 500);
+  }, 3000);
+});
+
+const emojiElements = document.querySelectorAll(".emoji-element");
+const emojiContainer = document.querySelector(".emoji-container");
+const smileBtn = document.querySelector(".smile-btn");
+smileBtn.addEventListener("click", () => {
+  if (emojiContainer.style.display === "flex") {
+    emojiContainer.style.display = "none";
+  } else emojiContainer.style.display = "flex";
+});
+
+emojiElements.forEach((emojiElement) => {
+  emojiElement.addEventListener("click", () => {
+    commentInput.value = commentInput.value + emojiElement.innerText;
+  });
+});
+emojiElements.forEach((emojiElement) => {
+  emojiElement.addEventListener("mouseover", () => {
+    emojiElement.style.cursor = "pointer";
+    emojiElement.style["font-size"] = "24px";
+  });
+});
+
+emojiElements.forEach((emojiElement) => {
+  emojiElement.addEventListener("mouseout", () => {
+    emojiElement.style.cursor = "default";
+    emojiElement.style["font-size"] = "20px";
+  });
+});
