@@ -84,6 +84,7 @@
 
 .profile-image {
   width: 20px;
+  height: 20px;
   border-radius: 10px;
 }
 
@@ -93,15 +94,11 @@
   background-image: radial-gradient(circle, black 2px, transparent 2.1px);
   background-size: 100% 33.33%;
 }
-/* profile-container 부분 끝 */
 
-/* 이미지 부분 시작*/
 .article {
   width: 100%;
 }
-/* 이미지 부분 끝*/
 
-/* button-container 부분 시작 */
 .button-container {
   border-bottom: 2px solid #d3d3d3;
   padding-top: 5px;
@@ -110,9 +107,6 @@
   width: 40px;
   margin-left: 3px;
 }
-/* button-container 부분 끝 */
-
-/* comment container 부분 시작*/
 .comment-container {
   padding: 5px 0px;
   display: flex;
@@ -134,13 +128,77 @@
   color: blue;
   opacity: 50%;
 }
-/* comment container 부분 끝*/
-
-/* 피드 부분 끝*/
 
 .footer-message {
   display: flex;
   justify-content: center;
   color: gray;
   font-size: 15px;
+}
+
+.story-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#profile-modal {
+	display: none;
+  width: 325px;
+  height: 250px;
+}
+
+#like-count-text {
+  padding-left : 6px;
+  padding-bottom: 6px;
+}
+
+#red-heart{
+  display: none;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: block;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
+.notification {
+  position: fixed;
+  right: -300px;
+  top: 20px;
+  z-index: 100;
+  background-color: #333;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: right 0.5s ease;
+  display: flex;
+  flex-direction: row;
+}
+
+.notification.show {
+  right: 20px;
 }
