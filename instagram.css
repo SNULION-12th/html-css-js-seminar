@@ -17,6 +17,9 @@
 .header .logo {
   height: 100%;
 }
+.header .logo:hover {
+  cursor: pointer;
+}
 
 .header .search {
   padding: 3px;
@@ -181,6 +184,52 @@
   display: none;
 }
 /* comment container 부분 끝*/
+
+.comment-imoji {
+  width: 330px;
+  background-color: lightgray;
+  position: fixed;
+  top: 450px;
+  left: 80px;
+  border-radius: 5px;
+  display: none;
+}
+
+.comment-imoji .container {
+  border-top: 1px solid gray;
+}
+
+.comment-imoji .imoji:hover {
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  width: 350px;
+  height: 130px;
+  justify-content: space-around;
+  transform: translateX(-650px);
+  transition: all 1s;
+}
+
+#card-profile {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+#card-img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+#card-text {
+  display: inline-block;
+  width: 180px;
+  margin: 0 10px;
+}
 
 /* 피드 부분 끝*/
 

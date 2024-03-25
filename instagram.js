@@ -8,8 +8,11 @@ storyElements.forEach( storyElement => {
    })
 })
 
-storyModal.addEventListener('click', function() {
-  this.style.display = "none";
+// TODO 4
+storyModal.addEventListener('click', function(e) {
+  if(e.target === this) {
+    this.style.display = "none";
+  }
 })
 
 // 실습 2
@@ -25,18 +28,22 @@ profile_container.addEventListener('mouseout', () => {
   profile_modal.style.display = "none";
 });
 
-// 실습 3
+// 실습 3 , TODO3
 const likeCount = document.getElementById('like-count');
 const blackHeart = document.getElementById('black-heart');
 const redHeart = document.getElementById('red-heart');
+const card = document.getElementsByClassName('card')[0];
 
 blackHeart.addEventListener('click', () => {
   redHeart.style.display = "inline";
   blackHeart.style.display = "none";
-
   const count = parseInt(likeCount.innerText);
   likeCount.innerText = count+1;
 
+  card.style.transform = "translateX(-280px)";
+  setTimeout(() => {
+    card.style.transform = "translateX(-650px)";
+  }, 3000);
 })
 
 redHeart.addEventListener('click', () => {
