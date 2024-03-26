@@ -36,6 +36,11 @@
             <div class="story-owner">jennierubyjane</div>
           </div>
         </div>
+
+        <div class="story-modal">
+          <img id="story-image" src="./images/profile.png" />
+        </div>
+
         <section class="article-container">
           <div class="profile-container">
             <div class="profile">
@@ -44,22 +49,70 @@
             </div>
             <div class="menu"></div>
           </div>
+
+          <div class="profile-modal">
+            <img id="profile-modal" src="./images/likelion_snu.png" />
+          </div>
+
           <img class="article" src="./images/article.jpg" />
           <div class="button-container">
-            <img class="feed-buttons" src="./images/feed_like_button.png" />
+            <img
+              id="black-heart"
+              class="feed-buttons"
+              src="./images/feed_like_button.png"
+            />
+            <img
+              id="red-heart"
+              class="feed-buttons"
+              src="./images/red-heart.png"
+            />
             <img class="feed-buttons" src="./images/feed_comment_button.png" />
             <img class="feed-buttons" src="./images/feed_share_button.png" />
+
+            <div id="like-count-text">
+              <span>좋아요</span>
+              <span id="like-count">1003</span>
+            </div>
           </div>
-          <div class="comment-container">
-            <img class="smile" src="./images/smile.png" />
-            <input class="comment" placeholder="댓글 달기..." />
-            <button class="comment-button">게시</button>
+          <form class="comments-create-form">
+            <div class="comment-container">
+              <img class="smile" src="./images/smile.png" />
+              <input class="comment" placeholder="댓글 달기..." />
+              <button class="comment-button">게시</button>
+            </div>
+          </form>
+
+          <div class="selEmo" style="display: none">
+            <section>
+              <h5>최고 인기 이모티콘</h5>
+              <span id="e0">😆</span>
+              <span id="e1">🤣</span>
+              <span id="e2">🥰</span>
+              <span id="e3">🤔</span>
+              <span id="e4">🧐</span><br />
+              <span id="e5">😭</span>
+              <span id="e6">❤️</span>
+              <span id="e7">💯</span>
+              <span id="e8">⛅</span>
+              <span id="e9">❓</span>
+            </section>
           </div>
+          <div class="written-comments-container"></div>
         </section>
       </div>
+
+      <div class="like-modal">
+        <h3>우선순위</h3>
+        <div class="modal-article">
+          <img class="m1" src="./images/profile.png" />
+          <p>likelion님이 회원님의 게시물을 <br />좋아합니다.</p>
+          <img class="m2" src="./images/article.jpg" />
+        </div>
+      </div>
       <footer>
-        <p class="footer-message">Ⓒ2024 LIONGRAM</p>
+        <p class="footer-message">Ⓒ2023 LIONGRAM</p>
       </footer>
     </main>
+    <script src="./instagram.js"></script>
   </body>
 </html>
