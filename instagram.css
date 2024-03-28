@@ -15,7 +15,7 @@
 }
 
 .header .logo {
-  height: 100%; /* 30px */
+  height: 100%;
 }
 
 .header .search {
@@ -25,10 +25,9 @@
 }
 
 .header .icon-list {
-  height: 100%; /* 30px */
+  height: 100%;
 }
 
-/* 스토리 부분 */
 .story-container {
   display: flex;
   flex-direction: row;
@@ -57,8 +56,6 @@
   margin-top: 2px;
   font-size: 8px;
 }
-
-/* 피드 부분 시작 */
 
 .article-container {
   display: flex;
@@ -96,23 +93,27 @@
   background-image: radial-gradient(circle, black 2px, transparent 2.1px);
   background-size: 100% 33.33%;
 }
+
 /* profile-container 부분 끝 */
 
 /* 이미지 부분 시작*/
 .article {
   width: 100%;
 }
-/* 이미지 부분 시작*/
+
+/* 이미지 부분 끝*/
 
 /* button-container 부분 시작 */
 .button-container {
   border-bottom: 2px solid #d3d3d3;
   padding-top: 5px;
 }
+
 .feed-buttons {
   width: 40px;
   margin-left: 3px;
 }
+
 /* button-container 부분 끝 */
 
 /* comment container 부분 시작*/
@@ -138,6 +139,154 @@
   color: blue;
   opacity: 50%;
 }
+
 /* comment container 부분 끝*/
 
 /* 피드 부분 끝*/
+
+.footer-message {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 15px;
+}
+
+/* 실습1 */
+
+.story-modal {
+  display: none;
+  /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1;
+  /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* 스크롤 허용 auto */
+  cursor: pointer;
+  /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 모달 가운데에 놓기 */
+}
+
+/* 실습2 */
+
+#profile-modal {
+  display: none;
+  width: 325px;
+  height: 250px;
+}
+
+/* 실습3 */
+#like-count-text {
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+#red-heart {
+  display: none;
+}
+
+/* 실습4 */
+.comment-wrapper:hover > .comment-delete-icon {
+  display: inline;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
+.notification {
+  display: flex;
+  width: 370px;
+  height: 70px;
+  background-color: black;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 20%;
+  left: 100%;
+  transition: left 1s ease;
+}
+.notification-profile {
+  width: 48px;
+  height: 48px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.profile-snuofficial {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.notification-text {
+  color: white;
+  font-size: 13px;
+}
+
+.notification-post {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-image: url("./images/article.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.imoticon {
+  display: flex;
+  width: 180px;
+  height: 80px;
+  background-color: white;
+  flex-direction: column;
+  border: 1px solid black;
+  /* position: absolute;
+  top: 74%;
+  left: 20%; */
+}
+.a,
+.b,
+.c,
+.d,
+.e,
+.f,
+.g,
+.h,
+.i,
+.j,
+.k,
+.l,
+.m,
+.n {
+  width: 20px;
+  height: 20px;
+}
+
+.imoticon-best {
+  margin-top: 1%;
+  margin-bottom: 5%;
+  font-size: 13px;
+  color: black;
+}
+
+.imoticon {
+  display: inline;
+}

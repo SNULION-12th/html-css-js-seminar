@@ -6,43 +6,41 @@
     <link rel="stylesheet" type="text/css" href="./instagram.css" />
     <title>Liongram</title>
   </head>
+
   <body>
-    <div class="main-container">
+    <main class="main-container">
       <header class="header">
-        <img class="logo" src="./images/logo.png" />
+        <img class="logo icon" src="./images/logo.png" />
         <input class="search" placeholder="검색" />
-        <img class="icon-list" src="./images/icon_list.png" />
+        <img class="icon-list icon" src="./images/icon_list.png" />
       </header>
-    </div>
-
-    <div class="content-container">
-      <div class="story-container">
-        <div class="story-element">
-          <div class="story"></div>
-          <div class="story-owner">내 스토리</div>
+      <div class="content-container">
+        <div class="story-container">
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">내 스토리</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">xeesoxee</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">e0_jin_03</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">j._.woonly</div>
+          </div>
+          <div class="story-element">
+            <div class="story"></div>
+            <div class="story-owner">jennierubyjane</div>
+          </div>
         </div>
-        <div class="story-element">
-          <div class="story"></div>
-          <div class="story-owner">xeesoxee</div>
+        <div class="story-modal">
+          <img id="story-image" class="forjs" src="./images/profile.png" />
         </div>
-        <div class="story-element">
-          <div class="story"></div>
-          <div class="story-owner">e0_jin_03</div>
-        </div>
-        <div class="story-element">
-          <div class="story"></div>
-          <div class="story-owner">j._.woonly</div>
-        </div>
-        <div class="story-element">
-          <div class="story"></div>
-          <div class="story-owner">jennierubyjane</div>
-        </div>
-      </div>
-    </div>
-
-    
-        <!-- 피드 부분 코드 시작 : content-container 내부에 추가 -->
-        <div class="article-container">
+        <section class="article-container">
           <div class="profile-container">
             <div class="profile">
               <img class="profile-image" src="./images/profile.png" />
@@ -50,25 +48,108 @@
             </div>
             <div class="menu"></div>
           </div>
+
+          <div class="profile-modal">
+            <img id="profile-modal" src="./images/likelion_snu.png" />
+          </div>
           <img class="article" src="./images/article.jpg" />
           <div class="button-container">
-            <img class="feed-buttons" src="./images/feed_like_button.png" />
+            <img
+              class="feed-buttons"
+              id="black-heart"
+              src="./images/feed_like_button.png"
+            />
+            <img
+              id="red-heart"
+              class="feed-buttons"
+              src="./images/red-heart.png"
+            />
             <img class="feed-buttons" src="./images/feed_comment_button.png" />
             <img class="feed-buttons" src="./images/feed_share_button.png" />
+            <div id="like-count-text">
+              <span>좋아요</span>
+              <span id="like-count">1003</span>
+            </div>
           </div>
-          <div class="comment-container">
-            <img class="smile" src="./images/smile.png" />
-            <input class="comment" placeholder="댓글 달기..." />
-            <button class="comment-button">게시</button>
-          </div>
-        </div>
-        <!-- 피드 부분 코드 끝 -->
+
+          <form class="comments-create-form">
+            <div class="comment-container">
+              <img class="smile" src="./images/smile.png" />
+              <input class="comment" placeholder="댓글 달기..." />
+              <button type="submit" class="comment-button">게시</button>
+            </div>
+          </form>
+
+          <div class="written-comments-container"></div>
+        </section>
       </div>
-    </div>
-    
-    <!-- footer를 content-container div와 같은 층위에 추가 -->
-    <footer>
-        <p class="footer-message">Ⓒ2024 LIONGRAM</p>
-    </footer>
+      <div class="notification">
+        <div class="notification-profile">
+          <img class="profile-snuofficial" src="./images/pf.jpg" />
+        </div>
+        <p class="notification-text">
+          <b>snu.official</b>님이 회원님의 게시물을<br />좋아합니다. 방금 전
+        </p>
+        <div class="notification-post"></div>
+      </div>
+
+      <div class="imoticon">
+        <p class="imoticon-best">최고 인기 이모티콘</p>
+        <div class="imoticon-list">
+          <img class="a imt" src="/images/Cold Emoji.png" />
+          <img
+            class="b imt"
+            src="/images/Devil Emoji [Download iPhone Emojis].png"
+          />
+          <img class="c imt" src="/images/Exploding Face Emoji.png" />
+          <img class="d imt" src="/images/Eyes Emoji.png" />
+          <img
+            class="e imt"
+            src="/images/Fearful Emoji [Download iPhone Emojis].png"
+          />
+          <img
+            class="f imt"
+            src="/images/Loudly Crying Emoji [Free Download iPhone Emojis].png"
+          />
+          <img
+            class="g imt"
+            src="/images/Octopus Emoji [Free Download IOS Emojis].png"
+          />
+          <img
+            class="h imt"
+            src="/images/Omg Emoji [Free Download iPhone Emojis].png"
+          />
+          <img
+            class="i imt"
+            src="/images/Praying Emoji [Free Download iPhone Emojis].png"
+          />
+          <img
+            class="j imt"
+            src="/images/Victory Emoji [Free Download IOS Emojis].png"
+          />
+          <img
+            class="k imt"
+            src="/images/Sunglasses Emoji [Free Download Cool Emoji].png"
+          />
+          <img
+            class="l imt"
+            src="/images/Tongue Out Emoji 1 [Free Download IOS Emojis].png"
+          />
+          <img
+            class="m imt"
+            src="/images/Turtle Emoji [Free Download IOS Emojis].png"
+          />
+          <img
+            class="n imt"
+            src="/images/Very Sad Emoji [Free Download iPhone Emojis in PNG].png"
+          />
+        </div>
+      </div>
+
+      <footer>
+        <p class="footer-message">Ⓒ2023 LIONGRAM</p>
+      </footer>
+    </main>
+    <script src="./instagram.js"></script>
   </body>
 </html>
