@@ -146,15 +146,15 @@ smileElement.addEventListener("click", () => {
   console.log(imoticonElement.style.display);
 });
 
-const imoticons = document.querySelectorAll(".imt");
-const textElement = document.querySelector(".comment");
+// const imoticons = document.querySelectorAll(".imt");
+// const textElement = document.querySelector(".comment");
 
-var inputValue = "";
-console.log(textElement);
-textElement.addEventListener("input", (ev) => {
-  var inputValue = ev.target.value;
-  console.log(inputValue);
-});
+// var inputValue = "";
+// console.log(textElement);
+// textElement.addEventListener("input", (ev) => {
+//   var inputValue = ev.target.value;
+//   console.log(inputValue);
+// });
 
 // imoticons.forEach((imoticon) => {
 //   imoticon.addEventListener("click", () => {
