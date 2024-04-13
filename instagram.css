@@ -20,6 +20,7 @@
 
 .logo {
   cursor: pointer;
+  height: 100%; /* 30px */
 }
 
 .header .search {
@@ -42,6 +43,7 @@
 
 .smile:hover {
   opacity: 0.5;
+  height: 100%; /* 30px */
 }
 
 .story-container {
@@ -77,6 +79,7 @@
   font-size: 8px;
 }
 
+/* 피드 부분 시작 */
 .article-container {
   display: flex;
   flex-direction: column;
@@ -119,7 +122,6 @@
 .article {
   width: 100%;
 }
-/* 이미지 부분 끝*/
 
 /* button-container 부분 시작 */
 .button-container {
@@ -138,6 +140,7 @@
   display: flex;
   width: 100%;
 }
+
 .smile {
   width: 30px;
 }
